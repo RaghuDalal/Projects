@@ -16,15 +16,10 @@ body {
     background-color: white;
 }
 
-.card {
-    margin: 0 auto;
-    float: none;
-    margin-bottom: 10px;
-    margin-right: 30px;
-    margin-left: 30px;
-}
+
 
 .footer-top {
+    margin-top: 25px;
     background-color: white;
     padding: 80px;
 }
@@ -66,7 +61,7 @@ body {
     text-decoration: none;
 }
 
-.segment-two ul li a:hover{
+.segment-two ul li a:hover {
     color: #E71214 !important;
 
 }
@@ -145,7 +140,7 @@ body {
     color: white;
     height: 40px;
     box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-    
+
 }
 
 .footer-bottom-text {
@@ -154,4 +149,43 @@ body {
     background: grey;
     line-height: 30px;
     margin-bottom: 0;
+}
+
+
+
+.wrapper {
+    margin-top: 50px;
+}
+
+.box {
+    width: 80%;
+    height: 600px;
+    display: inline-block;
+    margin: 0 10%;
+    box-shadow: 0 27px 87px rgba(0, 0, 0, 0.37);
+    border-radius: 25px;
+}
+
+.box-img{
+    float: left;
+    width: 45%;
+}
+
+.box-text{
+    width: 55%;
+    float: left;
+    padding-left: 35px;
+    
+}
+.box-text h1{
+    font-family: "Ubuntu";
+    font-weight: bolder;
+    margin-bottom: 15px;
+}
+
+.box-text .social a{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background: blue;
 }
