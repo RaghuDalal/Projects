@@ -159,7 +159,7 @@ body {
 
 .box {
     width: 80%;
-    height: 600px;
+    height: 500px;
     display: inline-block;
     margin: 0 10%;
     box-shadow: 0 27px 87px rgba(0, 0, 0, 0.37);
@@ -168,12 +168,13 @@ body {
 
 .box-img{
     float: left;
-    width: 45%;
+    width: 55%;
 }
 
 .box-text{
+    margin-top: 50px;
     width: 55%;
-    float: left;
+    float: right;
     padding-left: 35px;
     
 }
@@ -185,7 +186,14 @@ body {
 
 .box-text .social a{
     display: inline-block;
-    height: 50px;
-    width: 50px;
-    background: blue;
+    height: 40px;
+    width: 40px;
+    background: #0069d9;
+    border-radius: 50%;
+}
+
+.box-text .social a i{
+    font-size: 20px;
+    color: white;
+    padding: 10px 12px;
 }
