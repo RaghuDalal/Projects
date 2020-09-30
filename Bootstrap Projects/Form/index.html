@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
     <link class="logo" rel="icon" type="image/png" href="img/logo.png">
     <!-- Font Icon -->
@@ -60,36 +61,37 @@
     <div class="container">
         <div class="row">
             <h1 class="m-5 display-3 d-inline-block">Form Name</h1>
-            <button class="btn btn-dark d-inline-block" data-toggle="modal" data-target="#loginModal">Edit</button>
+            <button class="btn d-inline-block fa fa-pencil-square-o main_btn" data-toggle="modal"
+                data-target="#loginModal"></button>
 
 
             <div class="modal" id="loginModal">
                 <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title">Edit Form Name</h5>
-                      <button class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                      <form>
-                        <div class="form-group">
-                          <label for="username"></label>
-                          <input type="text" placeholder="Enter form name" class="form-control">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Edit Form Name</h5>
+                            <button class="close" data-dismiss="modal">&times;</button>
                         </div>
-            
-                      </form>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="username"></label>
+                                    <input type="text" placeholder="Enter form name" class="form-control">
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-dismiss="modal">Update</button>
+                        </div>
                     </div>
-                    <div class="modal-footer">
-                      <button class="btn btn-primary" data-dismiss="modal">Update</button>
-                    </div>
-                  </div>
                 </div>
-              </div>
-            
+            </div>
+
 
         </div>
-        <hr/>
-        
+        <hr />
+
 
         <div class="row">
             <div class="col-2 ">
