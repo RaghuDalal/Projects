@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/calculator.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link class="logo" rel="icon" type="image/png" href="img/cal.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Calculator</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box">
+
+            <form class="m-5 ">
+                <div class="form-row">
+                    <div class="col">
+                        <input type="number" id='value1' class="form-control" placeholder="First Number">
+                    </div>
+                    <div class="col">
+                        <input type="number" id='value2' class="form-control" placeholder="Second number">
+                    </div>
+                </div>
+            </form>
+            <div class="container">
+                <button onclick="Sum();" type="button" class="btn btn-primary btn-lg btn-block">Sum</button>
+                <button onclick="Sub();" type="button" class="btn btn-success btn-lg btn-block">Sub</button>
+                <button onclick="Mul();" type="button" class="btn btn-primary btn-lg btn-block">Mul</button>
+                <button onclick="Div();" type="button" class="btn btn-success btn-lg btn-block">Div</button>
+
+            </div>
+
+            <h2 class=" text-center m-4">Result</h2>
+            <p class="text-center m-4 display-1" id='changeable'></p>
+
+
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+        integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous">
+    </script>
+    <script src=" https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+
+
+
+    <script type="text/javascript" src="js/calculator.js"></script>
+</body>
+
+</html>
