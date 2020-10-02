@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/calculator.css">
+    <link rel="stylesheet" href="css/calculatorv2.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
     <link class="logo" rel="icon" type="image/png" href="img/cal.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -15,10 +15,7 @@
 </head>
 
 <body>
-    <div class="container ">
-        <a role="button" href="calculatorv2.html" class="btn btn-warning redirect d-flex justify-content-center" >Calculator v2</a>
-
-    </div>
+    
     
     <div class="wrapper">
         <div class="box">
@@ -33,13 +30,27 @@
                     </div>
                 </div>
             </form>
-            <div class="container">
+            <div class="container text-center">
+                <div class="btn-group ">
+                    <button type="button" class="btn btn-success btn-lg dropdown-toggle m-4 " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Calculate
+                    </button>
+                    <div class="dropdown-menu">
+                      <a onclick="Sum();" class="dropdown-item" href="#">Sum</a>
+                      <a onclick="Sub();" class="dropdown-item" href="#">Sub</a>
+                      <a onclick="Mul();" class="dropdown-item" href="#">Mul</a>
+                      <a onclick="Div();" class="dropdown-item" href="#">Div</a>
+
+                    </div>
+                  </div>
+            </div>
+            <!--<div class="container">
                 <button onclick="Sum();" type="button" class="btn btn-primary btn-lg btn-block">Sum</button>
                 <button onclick="Sub();" type="button" class="btn btn-success btn-lg btn-block">Sub</button>
                 <button onclick="Mul();" type="button" class="btn btn-primary btn-lg btn-block">Mul</button>
                 <button onclick="Div();" type="button" class="btn btn-success btn-lg btn-block">Div</button>
 
-            </div>
+            </div>-->
 
             <h2 class=" text-center m-4">Result</h2>
             <p class="text-center m-4 display-1" id='changeable'></p>
@@ -59,7 +70,7 @@
 
 
 
-    <script type="text/javascript" src="js/calculator.js"></script>
+    <script type="text/javascript" src="js/calculatorv2.js"></script>
 </body>
 
 </html>
