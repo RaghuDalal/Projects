@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Information</title>
     <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
+    
 </head>
 <body>
 
@@ -14,7 +16,7 @@
 
 
     <div class="payment-title">
-        <h1>Payment Information</h1>
+        <h1 class="heading">Payment Information</h1>
     </div>
     <div class="container preload">
         <div class="creditcard">
@@ -117,11 +119,11 @@
     <div class="form-container">
         <div class="field-container">
             <label for="name">Name</label>
-            <input id="name" maxlength="20" type="text">
+            <input id="name" onkeyup="show()" maxlength="20" type="text">
         </div>
         <div class="field-container">
             <label for="cardnumber">Card Number</label>
-            <input id="cardnumber" type="text" pattern="[0-9]*" inputmode="numeric">
+            <input id="cardnumber" type="number" onkeyup="show1()" pattern="[0-9]*" inputmode="numeric">
             <svg id="ccicon" class="ccicon" width="750" height="471" viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink">
 
@@ -129,7 +131,7 @@
         </div>
         <div class="field-container">
             <label for="expirationdate">Expiration (mm/yy)</label>
-            <input id="expirationdate" type="text" pattern="[0-9]*" inputmode="numeric">
+            <input id="expirationdate" onkeyup="show2()" type="text" pattern="[0-9]*" inputmode="numeric">
         </div>
         <div class="field-container">
             <label for="securitycode">Security Code</label>
@@ -141,6 +143,8 @@
 
 
     <script type="text/javascript" src="js/payment.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.0.5/imask.min.js" integrity="sha512-0ctiD2feH7vdHZ5jjAKNYts4h+IBRq7Nm5wACMJG1Pj5AQyprSHzX/ijMm77AcLLW5cemQptH+9EcviiKCC0cQ==" crossorigin="anonymous"></script>
 </body>
 </html>
