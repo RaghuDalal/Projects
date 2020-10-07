@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odd Even</title>
-    <link rel="stylesheet" href="css/checker.css">
+    <link rel="stylesheet" href="css/simpleInterest.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -23,18 +23,26 @@
             <center>
 
                 <div class="container">
-                    <p class="display-3 m-3">Odd Even Finder</p>
+                    <p class="display-3 m-3">Simple Interest Calculator</p>
                     <hr>
                 </div>
 
                 <form>
                     <div class="form-row m-5">
-                        <input id="num" type="number" class="form-control" placeholder="Please enter any number">
+                        <div class="col">
+                            <input type="number" id="principle" class="form-control" placeholder="Enter Principle Amount">
+                        </div>
+                        <div class="col">
+                            <input type="number" id="rate" class="form-control" placeholder="Enter rate of Interest">
+                        </div>
+                        <div class="col">
+                            <input type="number" id="time" class="form-control" placeholder="Enter Time(in Years)">
+                        </div>
                     </div>
                 </form>
 
                 <div class="container">
-                    <button type="button" onclick="find();" class="btn btn-primary btn-lg">Find</button>
+                    <button type="button" onclick="find();" class="btn btn-primary btn-lg">Calculate</button>
                     <hr>
                 </div>
 
@@ -62,13 +70,13 @@
         <nav aria-label="Page navigation example">
             <ul class="pagination pagination-lg justify-content-center">
                 <li class="page-item">
-                    <a class="page-link" href="checker.html" tabindex="-1">Previous</a>
+                    <a class="page-link" href="oddEven.html" tabindex="-1">Previous</a>
                 </li>
                 <li class="page-item "><a class="page-link" href="checker.html">1</a></li>
-                <li class="page-item active"><a class="page-link" href="oddEven.html">2</a></li>
-                <li class="page-item"><a class="page-link" href="simpleInterest.html">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="simpleInterest.html">Next</a>
+                <li class="page-item"><a class="page-link" href="oddEven.html">2</a></li>
+                <li class="page-item active"><a class="page-link" href="simpleInterest.html">3</a></li>
+                <li class="page-item disabled">
+                    <a class="page-link" href="#">Next</a>
                 </li>
             </ul>
         </nav>
@@ -76,7 +84,7 @@
 
 
 
-    <script type="text/javascript" src="js/oddEven.js"></script>
+    <script type="text/javascript" src="js/simpleInterest.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
