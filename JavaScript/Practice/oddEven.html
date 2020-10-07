@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elegibility Checker</title>
+    <title>Odd Even</title>
     <link rel="stylesheet" href="css/checker.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -23,27 +23,30 @@
             <center>
 
                 <div class="container">
-                    <p class="display-3 m-3">Elegibility Checker</p>
+                    <p class="display-3 m-3">Odd Even Finder</p>
                     <hr>
                 </div>
 
                 <form>
                     <div class="form-row m-5">
-                        <input id="dob" type="number" class="form-control"
-                            placeholder="Please enter your Year of Birth">
+                        <input id="num" type="number" class="form-control" placeholder="Please enter any number">
                     </div>
                 </form>
 
                 <div class="container">
-                    <button type="button" onclick="calculate();" class="btn btn-primary btn-lg">Check</button>
+                    <button type="button" onclick="find();" class="btn btn-primary btn-lg">Find</button>
                     <hr>
                 </div>
 
 
-                <div class="container">
+                <div class="container mb-5">
                     <span class="display-1" id="change"></span>
 
                 </div>
+
+
+
+
 
 
 
@@ -55,13 +58,26 @@
         </div>
     </div>
 
+    <div class="container fixed-bottom">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-lg justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="checker.html" tabindex="-1">Previous</a>
+                </li>
+                <li class="page-item "><a class="page-link" href="checker.html">1</a></li>
+                <li class="page-item active"><a class="page-link" href="oddEven.html">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
 
 
-
-
-
-    <script type="text/javascript" src="js/checker.js"></script>
+    <script type="text/javascript" src="js/oddEven.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
