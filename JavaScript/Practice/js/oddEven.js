@@ -4,7 +4,7 @@ function find() {
     if(number==0){
         document.getElementById('change').innerHTML = "It's Zero";
     }
-    else if (number % 2 == 0){
+    else if (number % 2 == 0 && number>0){
         document.getElementById('change').innerHTML = "The number is Even";
         
     } 
