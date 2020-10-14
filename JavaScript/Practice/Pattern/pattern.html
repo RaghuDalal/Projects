@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patterns</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+
+
+
+
+    <div class="wrapper">
+        <div class="box">
+            <center>
+
+                <div class="container">
+                    <p class="display-3 m-3">Pattern</p>
+                    <hr>
+                </div>
+
+                <form>
+                    <div class="form-row m-5">
+                        <input id="num" type="number" class="form-control" placeholder="Please enter your Number">
+                    </div>
+                </form>
+                <div class="container text-center">
+                    <div class="btn-group ">
+                        <button type="button" class="btn btn-success btn-lg dropdown-toggle m-4 " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Choose Pattern
+                        </button>
+                        <div class="dropdown-menu">
+                          <a onclick="rightAngleTriangle();" class="dropdown-item" href="#">Tringle Star Pattern</a>
+                          <a onclick="colTriangle();" class="dropdown-item" href="#">Col Triangle</a>
+                          <a onclick="rowTriangle();" class="dropdown-item" href="#">Row Triangle</a>
+                          <a onclick="rowReverseTriangle();" class="dropdown-item" href="#">Row Triangle Reversed</a>
+                          <a onclick="squarePattern();" class="dropdown-item" href="#">Square Pattern</a>
+                          <a onclick="invertedNumber();" class="dropdown-item" href="#">Inverted Number</a>
+                          <a onclick="mirrorNumber();" class="dropdown-item" href="#">Mirror Number</a>
+    
+                        </div>
+                      </div>
+                </div>
+
+            </center>
+            <div class="container d-flex justify-content-center mb-5 display-4">
+                <div id='star'>
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+        integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous">
+    </script>
+    <script src=" https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="js/pattern.js"></script>
+</body>
+
+</html>

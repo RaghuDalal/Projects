@@ -8,16 +8,14 @@ function check(n) {
 
     return result;
 
-
 }
 
 function run() {
     val = document.getElementById("num").value;
     let rev = check(val);
-    if (rev==val){
+    if (rev == val) {
         document.getElementById("change").innerHTML = ("True");
-    }
-    else{
+    } else {
         document.getElementById("change").innerHTML = ("False");
     }
 }
