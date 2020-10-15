@@ -35,7 +35,7 @@ function converter(nmbr) {
     } else if (nmbr == 9) {
         return ("Nine");
     } else {
-        return ("Please enter a valid Number")
+        return ("Please enter a positive number")
     }
 
 }
