@@ -3,6 +3,7 @@ function convert(n) {
     const arrayOfDigits = Array.from(String(num), Number);
     const result = [];
 
+
     for (let element of arrayOfDigits) {
         let nm = converter(element);
         result.push(nm);
@@ -31,9 +32,9 @@ function converter(nmbr) {
         return ("Seven");
     } else if (nmbr == 8) {
         return ("Eight");
-    } else if(nmbr == 9){
+    } else if (nmbr == 9) {
         return ("Nine");
-    } else{
+    } else {
         return ("Please enter a valid Number")
     }
 
@@ -42,5 +43,7 @@ function converter(nmbr) {
 
 function run() {
     val = document.getElementById("num").value;
-    document.getElementById("change").innerHTML = convert(val)
+    let StrArray = convert(val);
+    let result = StrArray.join(' ');
+    document.getElementById("change").innerHTML = result
 }
