@@ -3,7 +3,6 @@ function convert(n) {
     const arrayOfDigits = Array.from(String(num), Number);
     const result = [];
 
-
     for (let element of arrayOfDigits) {
         let nm = converter(element);
         result.push(nm);
