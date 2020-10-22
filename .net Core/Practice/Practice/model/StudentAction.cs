@@ -8,17 +8,26 @@ namespace Practice.model
     {
         public void ReadWriteStudent()
         {
+            
             Student objectStudent = new Student();
-            objectStudent.Name = "KMA SCHOOL";
-            objectStudent.RollNo = 1;
+
+            Console.WriteLine("Please enter name");
+            objectStudent.Name = Convert.ToString(Console.ReadLine()); ;
+
+            Console.WriteLine("Please enter Roll No");
+            objectStudent.RollNo = Convert.ToInt32(Console.ReadLine()); ;
+
+            //Console.WriteLine("Please enter your DOB");
             objectStudent.DOB = DateTime.Now;
-            objectStudent.AnnualFee = 1250.50;
+
+            Console.WriteLine("Please enter Annual fee");
+            objectStudent.AnnualFee = Convert.ToDouble(Console.ReadLine()); ;
 
             Console.WriteLine("Student Detail is:");
             Console.WriteLine("==================");
             Console.WriteLine($"Name {objectStudent.Name}");
             Console.WriteLine("RollNo {0}",objectStudent.RollNo);
-            Console.WriteLine("fee"+  objectStudent.AnnualFee.ToString());
+            Console.WriteLine("Fee "+  objectStudent.AnnualFee.ToString());
             Console.WriteLine("Dob {0}" , objectStudent.DOB.ToString("mm/dd/yyyy"));
 
 

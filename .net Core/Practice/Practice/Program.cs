@@ -7,6 +7,7 @@ using checkPalindrome;
 using Pattern;
 using whileloop;
 using Practice.model;
+using ArgumentNamespace;
 
 namespace Practice
 {
@@ -14,12 +15,18 @@ namespace Practice
     {
         static void Main(string[] args)
         {
+            /*Console.WriteLine("Argument Sum");
+            ArgumentClass numSum = new ArgumentClass();
+            numSum.sum();
+            Console.WriteLine("\n");*/
 
+            Console.WriteLine("Property Set / Get class");
             StudentAction studentAction = new StudentAction();
             studentAction.ReadWriteStudent();
-            
-            /*
-            Console.WriteLine("Odd Even Finder");
+            Console.WriteLine("\n");
+
+
+            /*Console.WriteLine("Odd Even Finder");
             oddEvenFinder finder = new oddEvenFinder();
             finder.oddevnFinder();
             Console.WriteLine("\n");
@@ -52,8 +59,7 @@ namespace Practice
             Console.WriteLine("Do While");
             doWhile loop= new doWhile();
             loop.loop();
-            Console.WriteLine("\n");
-            */
+            Console.WriteLine("\n");*/
         }
     }
 }
