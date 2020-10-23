@@ -9,7 +9,17 @@
 .box {
     width: 80%;
     display: inline-block;
+    height: 350px;
     margin: 0 10%;
     box-shadow: 0 27px 87px rgba(0, 0, 0, 0.37);
     border-radius: 25px;
 }
+
+.boz {
+    width: 80%;
+    display: inline-block;
+    margin: 0 10%;
+    box-shadow: 0 27px 87px rgba(0, 0, 0, 0.37);
+    border-radius: 25px;
+}
+
