@@ -13,17 +13,11 @@ function StudentInsert() {
 function StudentUpdate() {
 
     var name = document.getElementById('name').value;
-    var index = document.getElementById('index').value;
-
-    student[index] = name;
-
+    var index = document.getElementById('index').value; 
+    student[index] = name; 
     document.getElementById('name').value = '';
-    document.getElementById('index').value = '';
-
-    alue = index;
-
-    StudentList();
-
+    document.getElementById('index').value = ''; 
+    StudentList(); 
 }
 
 function StudentDelete(index) {
