@@ -33,5 +33,12 @@ namespace RPG.Controllers
             characters.Add(newCharacter);
             return Ok(characters);
         }
+
+        [HttpDelete]
+         public IActionResult RemoveCharacter(Character deleteCharacter)
+         {
+             characters.Remove(deleteCharacter);
+             return Ok(characters);
+         }
     }
 }
