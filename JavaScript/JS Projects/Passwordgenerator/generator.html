@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/generator.css">
+
+    <!--Ubuntu Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Random Generator</title>
+
+</head>
+
+<body>
+    
+    <!--Box Design-->
+    <div class="wrapper">
+        <div class="box">
+
+            <!--Tag for aligning the elements in the box-->
+            <center>
+
+                <!--Heading-->
+                <div class="container">
+                    <p class="display-3 m-3">Random Number Generator</p>
+                    <hr>
+                </div>
+    
+                <!--User Input-->
+                <form class="m-5 ">
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="number" id='len' class="form-control" placeholder="Enter the length of Random numbers you want to create">
+                        </div>
+                    </div>
+                </form>
+
+                <!--DropDown Menu-->
+                <div class="container text-center">
+                    <div class="btn-group ">
+                        <button type="button" class="btn btn-success btn-lg dropdown-toggle m-4 " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Find Random
+                        </button>
+                        <div class="dropdown-menu">
+                          <a onclick="numOnly();" class="dropdown-item" href="#">Numbers only</a>
+                          <a onclick="lowerCase();" class="dropdown-item" href="#">Lower Case Alphabets only</a>
+                          <a onclick="upperCase();" class="dropdown-item" href="#">Upper Case Alphabers only</a>
+                          <a onclick="lowerUpper();" class="dropdown-item" href="#">Lower + Upper Case Alphabets</a>
+                          <a onclick="numAlpha();" class="dropdown-item" href="#">Numbers + Alphabets</a>
+    
+                        </div>
+                      </div>
+                </div>
+
+
+                <!--Output Field-->
+                <p class="text-center m-5 display-1" id='result'></p>
+
+            </center>
+
+        </div>
+
+    </div>
+
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--Bootstrap JS Bundle-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+        integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous">
+    </script>
+    
+    <!--Bootstrap JS-->
+    <script src=" https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+
+    <!--Custom JS-->
+    <script type="text/javascript" src="js/generator.js"></script>
+</body>
+
+</html>
