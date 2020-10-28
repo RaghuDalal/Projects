@@ -1,5 +1,5 @@
-var student = []
-var studentList = {}
+var studentList = []
+var student = {}
 
 function StudentInsert() {
 
@@ -8,14 +8,13 @@ function StudentInsert() {
     var Date = document.getElementById('date').value;
     var MobileNo = document.getElementById('mobileNo').value;
 
-    //student.push(name);
+    student = new Object;
+    student.name = name;
+    student.rollno = RollNo;
+    student.date = Date;
+    student.mobileno = MobileNo;
 
-    studentList.name = name;
-    studentList.rollno = RollNo;
-    studentList.date = Date;
-    studentList.mobileno = MobileNo;
-
-    student.push(studentList);
+    studentList.push(student);
 
     document.getElementById('name').value = '';
     document.getElementById('rollNo').value = '';
@@ -33,9 +32,8 @@ function StudentUpdate() {
     var date = document.getElementById('date').value;
     var mobileNo = document.getElementById('mobileNo').value;
 
-
     var index = document.getElementById('index').value; 
-    student[index] = name; 
+    studentList[index] = name; 
 
     document.getElementById('name').value = '';
     document.getElementById('rollNo').value = '';
@@ -46,10 +44,9 @@ function StudentUpdate() {
     StudentList(); 
 }
 
-function StudentDelete(index) {
+function StudentDelete() {
 
-    // delete  student[index];
-    student.splice(index, 1);
+    studentList.splice(0, 1);
     StudentList();
 }
 
@@ -63,10 +60,14 @@ function StudentById(index) {
 }
 
 function StudentList() {
+    
     var data = '<table> <tr>  <td>ID &nbsp </td>    <td> &nbsp &nbsp &nbsp Name </td>  <td> &nbsp &nbsp &nbsp Roll No </td>  <td> &nbsp &nbsp &nbsp Mobile No </td> <td> &nbsp &nbsp &nbsp Date </td> <td> &nbsp &nbsp &nbsp Edit </td>    <td> &nbsp &nbsp &nbsp Delete </td>  </tr>';
 
+    
+
     for (var index = 0; index < studentList.length; index++) {
-        data = data + '<tr> <td>' + (index + 1) + '</td>  <td>' + "&nbsp &nbsp &nbsp " + student[index] + '</td> ';
+        data = data + '<tr> <td>' + (index + 1) + '</td>  <td>' + "&nbsp &nbsp &nbsp " + student.name + '</td>    <td>' + "&nbsp &nbsp &nbsp " + student.rollno+ '</td>  <td>' + "&nbsp &nbsp &nbsp " + student.mobileno+ '</td>  <td>' + "&nbsp &nbsp &nbsp " + student.date+ '</td> ';
+
         data = data + ' <td>&nbsp &nbsp &nbsp <button onclick="StudentById(' + index + ')">Edit </button> </td>';
         data = data + '<td> &nbsp &nbsp &nbsp <button onclick="StudentDelete(' + index + ')">Delete </button> </td>';
         data = data + '  </tr>';
