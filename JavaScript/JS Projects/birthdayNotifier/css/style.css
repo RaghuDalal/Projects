@@ -1,0 +1,15 @@
+body{
+    font-family: "Ubuntu" !important;
+}
+
+.wrapper {
+    margin-top: 50px;
+}
+
+.box {
+    width: 80%;
+    display: inline-block;
+    margin: 0 10%;
+    box-shadow: 0 27px 87px rgba(0, 0, 0, 0.37);
+    border-radius: 25px;
+}

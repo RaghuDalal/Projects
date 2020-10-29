@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>Age Calculator</title>
+    <title>Birthday Notifier</title>
 
 </head>
 
@@ -32,22 +32,24 @@
 
                 <!--Heading-->
                 <div class="container">
-                    <p class="display-3 m-3">Age Calculator</p>
+                    <p class="display-3 m-3">Birthday's this Month</p>
                     <hr>
                 </div>
     
-                <!--User Input-->
-                <form class="m-5 ">
-                    <div class="form-row">
-                        <div class="col">
-                            <input type="text" id='date' class="form-control" placeholder="Enter the date in the format YYYY/MM/DD">
+                <!--DropDown Menu-->
+                <div class="container text-center">
+                    <div class="btn-group ">
+                        <button type="button" class="btn btn-success btn-lg dropdown-toggle m-4 " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Find Birthdays
+                        </button>
+                        <div class="dropdown-menu">
+                    
+                          <a onclick="thisMonth();" class="dropdown-item" href="#">This Month</a>
+                          
                         </div>
-                    </div>
-                </form>
+                      </div>
+                </div>
 
-                <button type="button" onclick="calculate()" class="btn btn-primary btn-lg">Calculate Age</button>
-
-                
                 <!--Output Field-->
                 <p class="text-center m-5 display-1" id='result'></p>
 
@@ -71,7 +73,7 @@
     </script>
 
     <!--Custom JS-->
-    <script type="text/javascript" src="js/age.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
