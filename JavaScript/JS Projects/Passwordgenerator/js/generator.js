@@ -2,7 +2,7 @@ function loop(){
     let length = parseInt(document.getElementById('len').value);
     let randomNum = "";
     let n = charset.length
-    for (var i = 0 ; i < length; ++i) {
+    for (let i = 0 ; i < length; ++i) {
         randomNum += charset.charAt(Math.floor(Math.random() * n));
     }
     document.getElementById('result').innerHTML = randomNum;
@@ -41,4 +41,10 @@ function numAlpha(){
     charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     loop();
 
+}
+
+function extreme(){
+
+    charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()<>?/";
+    loop();
 }

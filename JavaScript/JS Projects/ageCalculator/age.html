@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--Custom CSS-->
-    <link rel="stylesheet" href="css/generator.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!--Ubuntu Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>Random Generator</title>
+    <title>Age Calculator</title>
 
 </head>
 
@@ -32,7 +32,7 @@
 
                 <!--Heading-->
                 <div class="container">
-                    <p class="display-3 m-3">Random Number Generator</p>
+                    <p class="display-3 m-3">Age Calculator</p>
                     <hr>
                 </div>
     
@@ -40,28 +40,14 @@
                 <form class="m-5 ">
                     <div class="form-row">
                         <div class="col">
-                            <input type="number" id='len' class="form-control" placeholder="Enter the length of Random numbers you want to create">
+                            <input type="text" id='date' class="form-control" placeholder="Enter the date in the format YYYY/MM/DD">
                         </div>
                     </div>
                 </form>
 
-                <!--DropDown Menu-->
-                <div class="container text-center">
-                    <div class="btn-group ">
-                        <button type="button" class="btn btn-success btn-lg dropdown-toggle m-4 " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Find Random
-                        </button>
-                        <div class="dropdown-menu">
-                          <a onclick="numOnly();" class="dropdown-item" href="#">Numbers only</a>
-                          <a onclick="lowerCase();" class="dropdown-item" href="#">Lower Case Alphabets only</a>
-                          <a onclick="upperCase();" class="dropdown-item" href="#">Upper Case Alphabers only</a>
-                          <a onclick="lowerUpper();" class="dropdown-item" href="#">Lower + Upper Case Alphabets</a>
-                          <a onclick="numAlpha();" class="dropdown-item" href="#">Numbers + Alphabets</a>
-                          <a onclick="extreme();" class="dropdown-item" href="#">Numbers + Alphabets + Special Chars</a>
-    
-                        </div>
-                      </div>
-                </div>
+                <button type="button" onclick="calculate()" class="btn btn-primary btn-lg">Calculate Age</button>
+
+                
 
 
                 <!--Output Field-->
@@ -87,7 +73,7 @@
     </script>
 
     <!--Custom JS-->
-    <script type="text/javascript" src="js/generator.js"></script>
+    <script type="text/javascript" src="js/age.js"></script>
 </body>
 
 </html>
