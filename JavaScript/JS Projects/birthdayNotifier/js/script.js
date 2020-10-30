@@ -26,7 +26,6 @@ function BirthdayListData(){
 function thisMonth(){
 
     let BirthdayList = BirthdayListData();
-
     let today = new Date();
     let month = today.getMonth();
     let result = []
