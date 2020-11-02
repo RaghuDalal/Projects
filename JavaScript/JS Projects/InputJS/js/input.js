@@ -6,6 +6,6 @@ function run(){
     let MobileNo = document.getElementById('mobileNo').value;
 
     if (name && RollNo && Date && MobileNo !=null){
-        document.getElementById('ShowData').innerHTML = "Success";
+        document.getElementById('ShowData').innerHTML = "SUCCESS";
     }
 }
