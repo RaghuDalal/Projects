@@ -1,7 +1,17 @@
 
 function getData(){
+    var txt="";
     url = "http://localhost:54005/api/stduentapi/GetStudents/";
-    fetch(url).then(response => response.json()).then(data => console.log(data))
+    fetch(url).then(response => response.json()).then(data => 
+    {
+        let table="<table border='1px' style='border-collapse:collapse;text-align:center;'><tr>   <td>ID</td>  <td>Name</td>  <td>Email</td>  <td>PhoneNo</td>  <td>RollNo</td></tr>"
+        for(let x=0;x<data.length;x++)
+        {
+            table=table+"<tr><td>"+data[x].id+"</td><td>"+data[x].name+"</td><td>"+data[x].emailid+"</td><td>"+data[x].mobileNo+"</td><td>"+data[x].rollNo+"</td></tr>";
+        }
+        table=table+"</table>"
+        document.getElementById("output").innerHTML=table;
+    })
 }
 
 
@@ -19,5 +29,5 @@ function postData(){
         },
         body:JSON.stringify(data)
     }
-    fetch(url, params).then(response=> response.text())
+    fetch(url, params).then(response=> response.text()).then(getData())
 }
