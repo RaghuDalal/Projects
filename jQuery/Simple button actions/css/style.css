@@ -1,0 +1,35 @@
+/* Using Ubuntu Fonts */
+body{
+    font-family: "Ubuntu" !important;
+}
+
+.wrapper {
+    margin-top: 50px;
+}
+
+/* Design Elements class */
+.box {
+    width: 80%;
+    display: inline-block;
+    margin: 0 10%;
+    box-shadow: 0 27px 87px rgba(0, 0, 0, 0.37);
+    border-radius: 25px;
+}
+
+/* Initial class */
+.divToChange {
+    border: solid 4px;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+/* jQuery toggle class  */
+.red {
+    border: solid 8px;
+    font-weight: bold;
+    border-style: dotted;
+    background-color: red;
+    font-size: 50px;
+    border-radius: 50px;
+}
