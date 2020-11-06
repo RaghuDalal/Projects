@@ -19,3 +19,7 @@ body{
 .cursor {
     cursor: zoom-in;
 }
+
+.cursorUL{
+    cursor: help;
+}
