@@ -5,11 +5,3 @@ $(document).ready(function(){
     });
 
 });
-
-//Move the text
-$(document).ready(function(){
-    $("#btn1").click(function(){
-        
-    });
-
-});
