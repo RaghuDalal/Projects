@@ -35,6 +35,6 @@ $(document).ready(function () {
         alert($("#h32,#ul2").text());
     });
     $("#ul3").dblclick(function () {
-        alert($("#h33, #ul3").html());
+        alert($("#h33, #ul3").text());
     });
 });
