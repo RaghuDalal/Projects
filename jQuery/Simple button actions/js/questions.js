@@ -1,40 +1,23 @@
 //Open up the options
 $(document).ready(function () {
-    $("#h31").click(function () {
-        $("#ul1").show(1000);
+    $("h3").click(function () {
+        $(this).next().show(1000).siblings("ul").hide(1000);
         $("button").show(1000);
-    });
-
-    $("#h32").click(function () {
-        $("#ul2").show(1000);
-        $("button").show(1000);
-
-    });
-
-    $("#h33").click(function () {
-        $("#ul3").show(1000);
-        $("button").show(1000);
-
     });
 });
 
 //Collapse Button
 $(document).ready(function () {
     $("#btn").click(function () {
-        $("#ul1,#ul2,#ul3").hide(1000);
+        $("ul").hide(1000);
         $("button").hide(1000);
     });
 });
 
 //Show the Question in the Alert
 $(document).ready(function () {
-    $("#ul1").dblclick(function () {
-        alert($("#h31,#ul1").text());
-    });
-    $("#ul2").dblclick(function () {
-        alert($("#h32,#ul2").text());
-    });
-    $("#ul3").dblclick(function () {
-        alert($("#h33, #ul3").text());
+    $("ul").dblclick(function () {
+    var x=$(this).prev("h3").text()+$(this).text();
+    alert(x);
     });
 });

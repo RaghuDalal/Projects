@@ -20,8 +20,9 @@ $(document).ready(function () {
 
     $("#btn4").click(function () {
         $('p').animate({
-            top: "220"
-        })
+            top: "220"},function (){location.reload(true)
+            })
+        
     });
 
 });
