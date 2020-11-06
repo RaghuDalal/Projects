@@ -29,12 +29,12 @@ $(document).ready(function () {
 //Show the Question in the Alert
 $(document).ready(function () {
     $("#ul1").dblclick(function () {
-        alert($("#h31").html());
+        alert($("#h31,#ul1").text());
     });
     $("#ul2").dblclick(function () {
-        alert($("#h32").html());
+        alert($("#h32,#ul2").text());
     });
     $("#ul3").dblclick(function () {
-        alert($("#h33").html());
+        alert($("#h33, #ul3").html());
     });
 });
