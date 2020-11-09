@@ -1,7 +1,7 @@
-//Open up the options of the clicked Ques and Hide the corressponding Options
+//Open up the options
 $(document).ready(function () {
     $("h3").click(function () {
-        $(this).next().show(1000).siblings("ul").hide(1000);
+        $(this).next().show(1000);
         $("button").show(1000);
     });
 });
