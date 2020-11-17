@@ -1,0 +1,125 @@
+//     var z="";
+// var index="";
+//             function gettingData() 
+//             {
+//                     $.get("http://localhost:54005/api/stduentapi/GetStudents/", function (data) {
+//                         z=data;
+//                         let table =
+//                             "<table border='1px' style='border-collapse:collapse;text-align:center;'><tr>   <td>ID</td>  <td>Name</td>  <td>Email</td>  <td>PhoneNo</td>  <td>RollNo</td>  <td colspan='2'>Action</td></tr> "
+//                         for (let x = 0; x < data.length; x++) {
+//                             table = table + "<tr><td>" + data[x].id + "</td><td>" + data[x]
+//                                 .name + "</td><td>" + data[x].emailid + "</td><td>" + data[x]
+//                                 .mobileNo + "</td><td>" + data[x].rollNo + "</td><td><button onclick='edit("+x+")'>Edit</button></td><td><button onclick='del("+x+")'>Delete</button></td></tr>";
+//                         }
+//                         table = table + "</table>"
+//                         $("p").html(table)
+//                     })
+//                     $(".post").css({display:"block"})
+//                 $(".update").css({display:"none"})
+
+//             }
+//             gettingData();
+
+            function postData() {
+               
+                $(".post").click(function () {
+                    
+                    var data={
+                        rollNo: "" + $("#name").val() + "",
+                        mobileNo: parseInt($("#phoneNo").val()),
+                        rollNo: parseInt($("#rollNo").val()),
+                        emailid: "" + $("#email").val() + ""
+                        }
+
+                    $.ajax({
+                        type:"POST",
+                        url:"http://localhost:54005/api/stduentapi/PostStudent",
+                        data:JSON.stringify(data),
+                        contentType:"application/json",
+                        success:function(data){
+                            console.log(data)},
+                    })
+                }) 
+            }
+           
+
+// function edit(x)
+// {
+//     $(".btn").html("<button onclick='update("+x+")'>Update</button>")
+//     $("#name").val(z[x].name);
+//     $("#phoneNo").val(z[x].mobileNo);
+//     $("#rollNo").val(z[x].rollNo);
+//     $("#email").val(z[x].emailid);
+
+//     $(".post").css({display:"none"})
+//     $(".update").css({display:"block"})
+   
+// }
+
+// function update(x)
+// {
+//     var newName= $("#name").val();
+//     var newPhone=$("#phoneNo").val();
+//     var newRoll=$("#rollNo").val();
+//     var newEmail=$("#email").val();
+    
+//     z[x].name=newName;
+//     z[x].phoneNo=newPhone;
+//     z[x].rollNo=newRoll;
+//     z[x].email=newEmail;
+//     console.log(x);
+
+//     gettingData();
+
+// }
+
+// function del(x)
+// {
+//     console.log("before : "+z.length)
+//     z.splice(x,1)
+//     console.log("after : " +z.length)
+
+// }
+
+
+
+
+
+
+
+            // function gettingData() {
+                $(".get").click(function () {
+                    $.get("http://localhost:54005/api/stduentapi/GetStudents/", function (data) {
+                        let table =
+                            "<table border='1px' style='border-collapse:collapse;text-align:center;'><tr>   <td>ID</td>  <td>Name</td>  <td>Email</td>  <td>PhoneNo</td>  <td>RollNo</td></tr>"
+                        for (let x = 0; x < data.length; x++) {
+                            table = table + "<tr><td>" + data[x].id + "</td><td>" + data[x]
+                                .name + "</td><td>" + data[x].emailid + "</td><td>" + data[x]
+                                .mobileNo + "</td><td>" + data[x].rollNo + "</td></tr>";
+                        }
+                        table = table + "</table>"
+                        $("p").html(table)
+                    })
+                })
+            // }
+            // gettingData();
+
+            // function postData() {
+               
+                $(".post").click(function () {
+                    var data={
+                        name: "" + $("#name").val() + "",
+                        mobileNo: parseInt($("#phoneNo").val()),
+                        rollNo: parseInt($("#rollNo").val()),
+                        emailid: "" + $("#email").val() + ""
+                        }
+                    $.ajax({
+                        type:"POST",
+                        url:"http://localhost:54005/api/stduentapi/PostStudent",
+                        data:JSON.stringify(data),
+                        contentType:"application/json",
+                        dataType:"json",
+                        success:function(data){
+                            console.log(data)},
+                    })
+                }) 
