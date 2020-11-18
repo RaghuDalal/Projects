@@ -7,7 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+<style>
+    
+   /* td{
+       width: 100px;
+       padding: 10px;
+       border-top: 3px solid black;
+       border-bottom: 3px solid black;
+   } 
+   tr{
+        border-spacing: 0 15px; 
+   } */
+        table { 
+                border-collapse:separate; 
+                border-spacing:0 15px; 
+            } 
+            th { 
+                background-color:green; 
+                Color:white; 
+            } 
+            th, td { 
+                width:100px; 
+                text-align:center; 
+                border:1px solid black; 
+                padding:5px 
+              
+            } 
+      
+</style>
 <body>
     <h3>Name</h3>
     <input type="text" id="name">
@@ -30,55 +57,59 @@
     <p class="data"></p>
 
 
-    <script>
-    var z="";
+<script>
 
-            function gettingData() 
-            {
-                    $.get("http://localhost:54005/api/stduentapi/GetStudents/", function (data) {
-                        z=data;
-                        let table =
-                            "<table border='1px' style='border-collapse:collapse;text-align:center;'><tr>   <td>ID</td>  <td>Name</td>  <td>Email</td>  <td>PhoneNo</td>  <td>RollNo</td>  <td colspan='2'>Action</td></tr> "
-                        for (let x = 0; x < data.length; x++) {
-                            table = table + "<tr><td>" + data[x].id + "</td><td>" + data[x]
-                                .name + "</td><td>" + data[x].emailid + "</td><td>" + data[x]
-                                .mobileNo + "</td><td>" + data[x].rollNo + "</td><td><button onclick='edit("+x+")'>Edit</button></td><td><button onclick='del("+x+")'>Delete</button></td></tr>";
-                        }
-                        table = table + "</table>"
-                        $(".data").html(table)
-                    })
-                    $(".post").css({display:"block"})
-                $(".update").css({display:"none"})
+var z="";
 
-            }
-            gettingData();
+function gettingData() {
+    $.get("http://localhost:54005/api/stduentapi/GetStudents/", function (data) {
+        z=data;
+        let table =
+            "<table style='border-seprate:collapse;text-align:center;padding:10px;'><tr>   <th>S.No</th>  <th>Name</th>  <th>Email</th>  <th>PhoneNo</th>  <th>RollNo</th>  <th colspan='2'>Action</th></tr> "
+        for (let x = 0; x < data.length; x++) {
+            table = table + "<tr><td>" + (x+1) + "</td><td>" + data[x]
+                .name + "</td><td>" + data[x].emailid + "</td><td>" + data[x]
+                .mobileNo + "</td><td>" + data[x].rollNo + "</td><td><button onclick='edit("+x+")'>Edit</button>&nbsp<button onclick='del("+x+")'>Delete</button></td></tr>";
+        }
+        table = table + "</table>"
+        $(".data").html(table)
+    })
+        $(".post").css({display:"block"})
+    $(".update").css({display:"none"})
 
-function postData() {
-               
-               $(".post").click(function () {
+}
+gettingData();
+
+
+function postData() {     
+$(".post").click(function () {
                    
-                   var data={
-                       name: "" + $("#name").val() + "",
-                       mobileNo: parseInt($("#phoneNo").val()),
-                       rollNo: parseInt($("#rollNo").val()),
-                       emailid: "" + $("#email").val() + ""
-                       }
+    var data={
+        name: "" + $("#name").val() + "",
+        mobileNo: parseInt($("#phoneNo").val()),
+        rollNo: parseInt($("#rollNo").val()),
+        emailid: "" + $("#email").val() + ""
+        }
 
-                   $.ajax({
-                       type:"POST",
-                       url:"http://localhost:54005/api/stduentapi/PostStudent",
-                       data:JSON.stringify(data),
-                       contentType:"application/json",
-                       success:function(data){
-                           console.log(data)},
-                   })
-               }) 
-           }
-           postData();
+    $.ajax({
+        type:"POST",
+        url:"http://localhost:54005/api/stduentapi/PostStudent",
+        data:JSON.stringify(data),
+        contentType:"application/json",
+        success:function(){
+            $("#name").val("");
+            $("#phoneNo").val("");
+            $("#rollNo").val("");
+            $("#email").val("");
+    
+        gettingData()}
+    })
+}) 
+} postData();
 
 function edit(x)
 {
-    $(".btn").html("<button onclick='update("+x+")'>Update</button>")
+    $(".btn").html("<button class='update' onclick='update("+x+")'>Update</button>")
     $("#name").val(z[x].name);
     $("#phoneNo").val(z[x].mobileNo);
     $("#rollNo").val(z[x].rollNo);
@@ -91,15 +122,39 @@ function edit(x)
 
 function update(x)
 {
+    $(".post").css({display:"none"})
+    $(".update").css({display:"block"})
+
+   
+
     var newName= $("#name").val();
     var newPhone=$("#phoneNo").val();
     var newRoll=$("#rollNo").val();
     var newEmail=$("#email").val();
+
+    var data={
+    id:parseInt(z[x].id),
+    name: "" + newName + "",
+    mobileNo: parseInt(newPhone),
+    rollNo: parseInt(newRoll),
+    emailid: "" +newEmail+ ""
+    }
    
-    z[x].name=newName;
-    z[x].phoneNo=newPhone;
-    z[x].rollNo=newRoll;
-    z[x].email=newEmail;
+$.ajax({
+    type:"PUT",
+    url:"http://localhost:54005/api/stduentapi/PutStudent",
+    data:JSON.stringify(data),
+    contentType:"application/json",
+    success:function(){
+        $("#name").val("");
+    $("#phoneNo").val("");
+    $("#rollNo").val("");
+    $("#email").val("");
+    
+        gettingData();
+    }
+})
+   
 
 }
 
@@ -108,9 +163,11 @@ function del(x)
 $.ajax({
     type:"DELETE",
     url:"http://localhost:54005/api/StduentApi/DeleteStudent/"+z[x].id+"",
+    success:function(){
+        gettingData();
+    }
 })
 }
-
 
 </script>
 </body>
