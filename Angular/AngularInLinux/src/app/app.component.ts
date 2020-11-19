@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'AngularInLinux';
   name = 'Ajay';
+  url = 'https://www.google.com';
+  data = 'Hello';
 }

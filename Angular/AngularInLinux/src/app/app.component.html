@@ -1,4 +1,22 @@
-<!--Interpolation-->
+<!-- One Way data binding -->
+
+<!-- 1. Interpolation -->
+<!-- In this , the value of name come from app.component.ts -->
 {{name}}
+<br>
+
+<!-- 2. Property-->
+<!--In this , the Property of a attribute come from TS file, we have to wrap href in [] -->
+<a [href]="url">Link</a>
+
+<!-- 3. Attribute -->
+<!--  -->
+
+
+
+<!-- Two Way Data Binding -->
+{{data}}
+<input [(ngModel)]="data">
+
 
 <h3>Ajay</h3>
