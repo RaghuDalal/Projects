@@ -24,3 +24,24 @@
 {{data}}
 
 <h3>Ajay</h3>
+
+<br>
+<br>
+<hr>
+<button [style.border]="isSpecial ? 'Non' : 'green'">Click</button>
+<br>
+<hr>
+<h1>Get input values</h1>
+<input type="text" (keyup) = "getInput($event.target.value)">
+<br>
+<h2>{{currentInput}}</h2>
+<br>
+<!-- Submit button for getting values -->
+<br>
+<input type="text" #input>
+<br>
+<button (click)="getInput(input.value)">Sumbit</button>
+<hr>
+
+
+

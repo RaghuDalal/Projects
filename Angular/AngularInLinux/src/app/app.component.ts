@@ -14,4 +14,13 @@ export class AppComponent {
   {
     this.data = 'Manoj';
   }
+  isSpecial = false;
+
+  //Getting live input value
+  currentInput = '';
+  getInput(val)
+  {
+    console.log(val);
+    this.currentInput = val;
+  }
 }
